@@ -1,2 +1,2 @@
 # PoI-temperature-prediction
-The implementation of the the paper on EAAI.
+The implementation of the the paper of PoI temperature prediction.
