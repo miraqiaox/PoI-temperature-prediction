@@ -1,0 +1,153 @@
+angles:
+- 0
+- 0
+- 0
+- 0
+- 0
+- 0
+- 0
+- 0
+- 0
+- 0
+# bcs: []
+bcs:
+- - sink
+  - - - 0
+      - 0
+    - - 0.1
+      - 0
+- - sink
+  - - - 0
+      - 0
+    - - 0
+      - 0.1
+- - sink
+  - - - 0.1
+      - 0
+    - - 0.1
+      - 0.1
+- - sink
+  - - - 0
+      - 0.1
+    - - 0.1
+      - 0.1
+
+config: config.yml
+data_dir: /mnt/jfs/liqiao/EAAI/recon-data-generator-master/example_dataset_vb
+fem_degree: '1'
+file_format: mat
+length: '0.1'
+method: fenics
+ndim: '2'
+nx: '200'
+observation_points:
+- - 0
+  - 40
+- - 40
+  - 60
+- - 60
+  - 200
+observation_points_type: grid
+positions:
+- - 0.019
+  - 0.092
+- - 0.093
+  - 0.079
+- - 0.045
+  - 0.015
+- - 0.08
+  - 0.025
+- - 0.072
+  - 0.088
+- - 0.036
+  - 0.033
+- - 0.021
+  - 0.066
+- - 0.047
+  - 0.079
+- - 0.06
+  - 0.055
+- - 0.022
+  - 0.014
+positions_type: coord
+geometry:
+- rectangle
+- rectangle
+- rectangle
+- rectangle
+- rectangle
+- rectangle
+- rectangle
+- rectangle
+- rectangle
+- rectangle
+power_distribution:
+- uniform
+- uniform
+- uniform
+- uniform
+- uniform
+- uniform
+- uniform
+- uniform
+- uniform
+- uniform
+powers:
+- - uniform
+  - 0
+  - 30000
+- - uniform
+  - 0
+  - 30000
+- - uniform
+  - 0
+  - 30000
+- - uniform
+  - 0
+  - 30000
+- - uniform
+  - 0
+  - 30000
+- - uniform
+  - 0
+  - 30000
+- - uniform
+  - 0
+  - 30000
+- - uniform
+  - 0
+  - 30000
+- - uniform
+  - 0
+  - 30000
+- - uniform
+  - 0
+  - 30000
+prefix: Example
+sample_n: '12000'
+sampler: sequence
+seed: '4052922094'
+task: continuous
+u_D: '298'
+units:
+- - 0.012
+  - 0.012
+- - 0.01
+  - 0.01
+- - 0.015
+  - 0.015
+- - 0.013
+  - 0.013
+- - 0.013
+  - 0.013
+- - 0.02
+  - 0.01
+- - 0.016
+  - 0.016
+- - 0.01
+  - 0.02
+- - 0.02
+  - 0.02
+- - 0.011
+  - 0.011
+worker: '64'

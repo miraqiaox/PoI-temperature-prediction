@@ -1,0 +1,180 @@
+angles:
+- 0
+- 0
+- 0
+- 0
+- 0
+- 0
+- 0
+- 0
+- 0
+- 0
+bcs:
+- - sink
+  - - - 0.0455
+      - 0
+    - - 0.0465
+      - 0
+- - sink
+  - - - 0.0205
+      - 0.1
+    - - 0.0215
+      - 0.1
+- - sink
+  - - - 0.0805
+      - 0.1
+    - - 0.0815
+      - 0.1
+- - sink
+  - - - 0
+      - 0.015
+    - - 0
+      - 0.016
+- - sink
+  - - - 0
+      - 0.065
+    - - 0
+      - 0.066
+- - sink
+  - - - 0.1
+      - 0.0505
+    - - 0.1
+      - 0.0515
+config: /mnt/jfs/liqiao/EAAI/recon-data-generator-master/config/config.yml
+data_dir: /mnt/jfs/liqiao/EAAI/recon-data-generator-master/example_dataset1
+fem_degree: '1'
+file_format: mat
+gaussian_param: '1'
+geometry:
+- rectangle
+- rectangle
+- rectangle
+- rectangle
+- rectangle
+- rectangle
+- rectangle
+- rectangle
+- rectangle
+- rectangle
+length: '0.1'
+method: fenics
+monitoring_sampling:
+- - center
+  - 1
+  - 1
+ndim: '2'
+nx: '200'
+positions:
+# - - 0.08
+#   - 0.025
+# - - 0.05
+#   - 0.01
+# - - 0.08
+#   - 0.08
+# - - 0.02
+#   - 0.08
+# - - 0.02125
+#   - 0.015
+# - - 0.02125
+#   - 0.035
+# - - 0.03
+#   - 0.075
+# - - 0.05
+#   - 0.08
+# - - 0.08125
+#   - 0.055
+# - - 0.05
+#   - 0.003
+
+- - 160
+  - 50
+- - 100
+  - 20
+- - 160
+  - 160
+- - 40
+  - 160
+- - 42.5
+  - 30
+- - 42.5
+  - 70
+- - 60
+  - 105
+- - 100
+  - 160
+- - 162.5
+  - 110
+- - 100
+  - 60
+positions_type: grid
+power_distribution:
+- gaussian
+- uniform
+- gaussian
+- gaussian
+- gaussian
+- gaussian
+- gaussian
+- gaussian
+- gaussian
+- uniform
+powers:
+- - uniform
+  - 0
+  - 30000
+- - gumbel
+  - 30000
+  - 3000
+- - normal
+  - 30000
+  - 3000
+- - normal
+  - 30000
+  - 3000
+- - uniform
+  - 0
+  - 30000
+- - uniform
+  - 0
+  - 30000
+- - normal
+  - 30000
+  - 3000
+- - normal
+  - 30000
+  - 3000
+- - uniform
+  - 0
+  - 30000
+- - gumbel
+  - 30000
+  - 3000
+prefix: Example
+sample_n: '12000'
+seed: '3382782867'
+special: n
+special_num: '0'
+task: continuous
+u_D: '298'
+units:
+- - 0.02
+  - 0.03
+- - 0.01
+  - 0.01
+- - 0.02
+  - 0.02
+- - 0.02
+  - 0.02
+- - 0.0225
+  - 0.01
+- - 0.0225
+  - 0.01
+- - 0.04
+  - 0.01
+- - 0.02
+  - 0.02
+- - 0.0225
+  - 0.01
+- - 0.01
+  - 0.01
+worker: '64'
