@@ -3,7 +3,7 @@ The implementation of the the paper of PoI temperature prediction.
 
 Data: we have generated the data by a generetor shown in https://github.com/shendu-sw/recon-data-generator
 
-The config files are the boundary conditions and power intensity of the three cases.
+The config files are the boundary conditions and power intensity of the three cases which is needed by the generator.
 
 The Node2Vec is refer to this paper:
 
