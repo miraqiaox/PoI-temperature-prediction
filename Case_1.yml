@@ -33,7 +33,7 @@ bcs:
       - 0.1
 
 config: config.yml
-data_dir: /mnt/jfs/liqiao/EAAI/recon-data-generator-master/example_dataset_vb
+data_dir: ./example_dataset_vb
 fem_degree: '1'
 file_format: mat
 length: '0.1'
