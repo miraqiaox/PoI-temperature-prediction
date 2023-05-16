@@ -96,7 +96,7 @@ for epoch in range(args.epochs):
     total_time += epoch_time
     if train_loss < mae:
         torch.save(model.state_dict(),
-                    "/mnt/share1/liqiao/EAAI_dis/graph_gcn/model_pkl/uniform_monitoring_100/net_hidf{:d}_nhid{:d}_bs{:d}_{:d}.pth".format(
+                    "./model_pkl/uniform_monitoring_100/net_hidf{:d}_nhid{:d}_bs{:d}_{:d}.pth".format(
                     args.hidden_feat, args.num_hid_layers, args.batchsize, n_out))
         mae = train_loss
     if (epoch + 1) % 10  == 0:
