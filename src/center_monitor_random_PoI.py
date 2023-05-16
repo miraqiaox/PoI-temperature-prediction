@@ -28,7 +28,7 @@ parser.add_argument('--rate', default=0.8, type=float, help='rate of training se
 parser.add_argument('--embed_size', default=4, type=int, help='Node embedding size')
 parser.add_argument('--hidden_feat', default=256, type=int, help='features of hidden layer')
 parser.add_argument('--num_hid_layers', default=64, type=int, help='num of hidden layers')
-# parser.add_argument('--str_root', default='/mnt/liqiao/graph/graph/Node2vec/Node_Vec', type=str, help='data root')
+
 args = parser.parse_args()
 
 
@@ -88,7 +88,7 @@ for epoch in range(args.epochs):
     total_time += epoch_time
     if train_loss < mae:
         torch.save(model.state_dict(),
-                    "/mnt/share1/liqiao/EAAI_dis/graph_gcn/model_pkl/center_monitoring_random_PoI/net_hidf{:d}_nhid{:d}_bs{:d}_{:d}.pth".format(
+                    "./model_pkl/center_monitoring_random_PoI/net_hidf{:d}_nhid{:d}_bs{:d}_{:d}.pth".format(
                     args.hidden_feat, args.num_hid_layers, args.batchsize, n_out))
         mae = train_loss
     if (epoch + 1) % 10  == 0:
