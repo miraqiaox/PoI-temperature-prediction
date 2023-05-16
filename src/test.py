@@ -21,13 +21,12 @@ parser.add_argument('--init_lr', default=5e-3, type=float, help='inital learning
 parser.add_argument('--gamma', type=float, default=0.97, help='LR is multiplied by gamma on schedule.')
 parser.add_argument('--epochs', default=200, type=int, help='training epochs')
 parser.add_argument('--batchsize', default=2, type=int, help='train batch size')
-parser.add_argument('--data_root', default='/mnt/zhaoxiaoyu/data/layout_data/inverse_dataset/Example', type=str, help='data root')
-parser.add_argument('--str_root', default='/mnt/jfs/liqiao/EAAI/structure/1600/thershold/150', type=str, help='struc mat root')
+parser.add_argument('--data_root', default='./inverse_dataset/Example', type=str, help='data root')
+parser.add_argument('--str_root', default='./structure/1600/thershold/150', type=str, help='struc mat root')
 parser.add_argument('--rate', default=0.8, type=float, help='rate of training set')
 parser.add_argument('--embed_size', default=4, type=int, help='Node embedding size')
 parser.add_argument('--hidden_feat', default=256, type=int, help='features of hidden layer')
 parser.add_argument('--num_hid_layers', default=64, type=int, help='num of hidden layers')
-# parser.add_argument('--str_root', default='/mnt/liqiao/graph/graph/Node2vec/Node_Vec', type=str, help='data root')
 args = parser.parse_args()
 
 n_out = 400
@@ -70,7 +69,7 @@ model = GCN(infeat=1, n_in=10, outfeat=1, n_out=n_out, str_feat=args.embed_size,
 
 Loss = torch.nn.L1Loss()
 # model = torch.nn.DataParallel(model)
-model.load_state_dict(torch.load('/mnt/jfs/liqiao/EAAI/graph_gcn/model_pkl/thershold/net_hidf256_nhid64_bs64_150_test.pth'))
+model.load_state_dict(torch.load('./model_pkl/thershold/net_hidf256_nhid64_bs64_150_test.pth'))
 model.eval()
 
 with torch.no_grad():
