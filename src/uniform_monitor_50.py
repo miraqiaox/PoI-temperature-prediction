@@ -21,13 +21,12 @@ parser.add_argument('--init_lr', default=5e-3, type=float, help='inital learning
 parser.add_argument('--gamma', type=float, default=0.97, help='LR is multiplied by gamma on schedule.')
 parser.add_argument('--epochs', default=100, type=int, help='training epochs')
 parser.add_argument('--batchsize', default=2, type=int, help='train batch size')
-parser.add_argument('--data_root', default='/mnt/share1/liqiao/dataset/layout/vp_dis/Example', type=str, help='data root')
-parser.add_argument('--str_root', default='/mnt/share1/liqiao/EAAI_VB/structure/400/uniform_monitoring_50', type=str, help='struc mat root')
+parser.add_argument('--data_root', default='./dataset/layout/vp_dis/Example', type=str, help='data root')
+parser.add_argument('--str_root', default='./structure/400/uniform_monitoring_50', type=str, help='struc mat root')
 parser.add_argument('--rate', default=0.8, type=float, help='rate of training set')
 parser.add_argument('--embed_size', default=4, type=int, help='Node embedding size')
 parser.add_argument('--hidden_feat', default=256, type=int, help='features of hidden layer')
 parser.add_argument('--num_hid_layers', default=64, type=int, help='num of hidden layers')
-# parser.add_argument('--str_root', default='/mnt/liqiao/graph/graph/Node2vec/Node_Vec', type=str, help='data root')
 args = parser.parse_args()
 
 
@@ -97,7 +96,7 @@ for epoch in range(args.epochs):
     total_time += epoch_time
     if train_loss < mae:
         torch.save(model.state_dict(),
-                    "/mnt/share1/liqiao/EAAI_dis/graph_gcn/model_pkl/uniform_monitoring_50/net_hidf{:d}_nhid{:d}_bs{:d}_{:d}.pth".format(
+                    "./model_pkl/uniform_monitoring_50/net_hidf{:d}_nhid{:d}_bs{:d}_{:d}.pth".format(
                     args.hidden_feat, args.num_hid_layers, args.batchsize, n_out))
         mae = train_loss
     if (epoch + 1) % 10  == 0:
