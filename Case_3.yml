@@ -40,8 +40,8 @@ bcs:
       - 0.0505
     - - 0.1
       - 0.0515
-config: /mnt/jfs/liqiao/EAAI/recon-data-generator-master/config/config.yml
-data_dir: /mnt/jfs/liqiao/EAAI/recon-data-generator-master/example_dataset1
+config: ./config/config.yml
+data_dir: ./example_dataset1
 fem_degree: '1'
 file_format: mat
 gaussian_param: '1'
