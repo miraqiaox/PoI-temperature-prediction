@@ -91,9 +91,9 @@ def load_data(x_point, pred_point, num_data, rate, num, transform=True, device='
     x_point为测点的坐标，pred_point为预测点的坐标，num_data为需要多少组
     '''
     if num < 5:
-        root = '/mnt/jfs/liqiao/EAAI/recon-data-generator-master/example_dataset_vb/Example'
+        root = './example_dataset_vb/Example'
     else:
-        root = '/mnt/jfs/liqiao/EAAI/recon-data-generator-master/example_dataset_vp/Example'
+        root = './example_dataset_vp/Example'
     x_tem = np.empty((num_data, len(x_point)))
     y_tem = np.empty((num_data, len(pred_point)))
     x_t = x_point.T
@@ -163,7 +163,7 @@ def load_data_dis(x_point, pred_point, num_data, rate, num, transform=True, devi
     x_point为测点的坐标，pred_point为预测点的坐标，num_data为需要多少组
     '''
     
-    root = '/mnt/jfs/liqiao/EAAI/recon-data-generator-master/example_dataset1/Example'
+    root = './example_dataset1/Example'
     x_tem = np.empty((num_data, len(x_point)))
     y_tem = np.empty((num_data, len(pred_point)))
     x_t = x_point.T
@@ -214,11 +214,11 @@ def load_data_dis(x_point, pred_point, num_data, rate, num, transform=True, devi
 
 def load_data_test(x_point, pred_point, num_data):
 
-    # root = '/mnt/jfs/liqiao/EAAI/recon-data-generator-master/example_dataset_vb/Example'
+    # root = './example_dataset_vb/Example'
 
-    # root = '/mnt/jfs/liqiao/EAAI/recon-data-generator-master/example_dataset_vp/Example'
+    # root = './example_dataset_vp/Example'
     
-    root = '/mnt/jfs/liqiao/EAAI/recon-data-generator-master/example_dataset1/Example'
+    root = './example_dataset1/Example'
     x_tem = np.empty((num_data, len(x_point)))
     y_tem = np.empty((num_data, len(pred_point)))
     x_t = x_point.T
@@ -267,7 +267,7 @@ def test(model, struc, adj, Loss, dataloader, device='cpu'):
 
 # test
 if __name__ == '__main__':
-    root = '/mnt/zhaoxiaoyu/data/layout_data/inverse_dataset/Example'
+    root = './dataset/Example'
     x_point = np.array([[0.019, 0.092], [0.093, 0.079], [0.045, 0.015], [0.08, 0.025], [0.072, 0.089],
                          [0.036, 0.033], [0.021, 0.066], [0.047, 0.079], [0.09, 0.055], [0.022, 0.014]])
     x_point = np.array(2000 * x_point, dtype=int)
