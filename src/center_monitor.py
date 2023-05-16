@@ -21,8 +21,8 @@ parser.add_argument('--init_lr', default=5e-3, type=float, help='inital learning
 parser.add_argument('--gamma', type=float, default=0.97, help='LR is multiplied by gamma on schedule.')
 parser.add_argument('--epochs', default=5, type=int, help='training epochs')
 parser.add_argument('--batchsize', default=64, type=int, help='train batch size')
-parser.add_argument('--data_root', default='/mnt/jfs/liqiao/EAAI/recon-data-generator-master/example_dataset1/Example', type=str, help='data root')
-parser.add_argument('--str_root', default='/mnt/jfs/liqiao/EAAI/structure/400/center_monitoring_uniform_PoI', type=str, help='struc mat root')
+parser.add_argument('--data_root', default='./example_dataset1/Example', type=str, help='data root')
+parser.add_argument('--str_root', default='./structure/400/center_monitoring_uniform_PoI', type=str, help='struc mat root')
 parser.add_argument('--rate', default=0.8, type=float, help='rate of training set')
 parser.add_argument('--embed_size', default=4, type=int, help='Node embedding size')
 parser.add_argument('--hidden_feat', default=256, type=int, help='features of hidden layer')
@@ -91,7 +91,7 @@ for epoch in range(args.epochs):
     total_time += epoch_time
     if train_loss < mae:
         torch.save(model.state_dict(),
-                    "/mnt/jfs/liqiao/EAAI/graph_gcn/model_pkl/net_hidf{:d}_nhid{:d}_bs{:d}_{:d}_test.pth".format(
+                    "./model_pkl/net_hidf{:d}_nhid{:d}_bs{:d}_{:d}_test.pth".format(
                     args.hidden_feat, args.num_hid_layers, args.batchsize, n_out))
         mae = train_loss
     if (epoch + 1) % 10  == 0:
